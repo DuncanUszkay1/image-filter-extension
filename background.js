@@ -29,10 +29,10 @@ async function predict(src) {
   .then(Log)
   .then(runModel)
   .then(Log)
-  .then(isAnime)
+  .then(isMatch)
 }
 
-async function isAnime(data) {
+async function isMatch(data) {
   return data[REPLACEMENT_CATEGORY] > PROBABILITY_THRESHOLD
 }
 
